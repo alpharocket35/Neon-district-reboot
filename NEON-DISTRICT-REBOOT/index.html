@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08090d">
+  <meta name="description" content="NEON DISTRICT: REBOOT — expérience fictive de jeu vidéo dans une mégalopole futuriste.">
+  <title>NEON DISTRICT: REBOOT</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="title-screen">
+  <div class="scanlines"></div>
+  <div class="noise"></div>
+  <div id="transition" class="transition" aria-hidden="true">
+    <div class="hack-wrap">
+      <div class="hack-mark">ND<span>://</span>07</div>
+      <div class="hack-label">PIRATAGE <i>EN COURS</i></div>
+      <div class="hack-track"><span id="hack-progress"></span></div>
+      <div class="hack-meta"><span id="hack-status">INITIALISATION DU SYSTÈME...</span><b id="hack-percent">00%</b></div>
+      <div id="terminal" class="terminal"></div>
+    </div>
+  </div>
+
+  <main id="title" class="title-wrap">
+    <div class="topline"><span>NEON DISTRICT NETWORK</span><span>BUILD 2.077.26 // ONLINE</span></div>
+    <div class="title-art">
+      <div class="sun"></div><div class="city city-back"></div><div class="city city-front"></div>
+      <div class="road"></div><div class="car-shape"><span></span></div>
+      <div class="title-logo" data-text="NEON DISTRICT">NEON DISTRICT</div>
+      <div class="subtitle">REBOOT <span>///</span> OPEN WORLD EXPERIENCE</div>
+      <div class="title-coordinates">NIGHT SECTOR 09<br>48°51'24.0"N / 02°21'08.0"E</div>
+    </div>
+    <div class="title-bottom">
+      <div class="edition">A CITY THAT NEVER<br><b>SHUTS DOWN.</b></div>
+      <button id="continue" class="continue-btn"><span class="blink">▶</span> APPUYEZ POUR CONTINUER <small>PRESS TO CONTINUE</small></button>
+      <div class="version">ND:R // V.1.0<br><span>© 2077 NEON DISTRICT</span></div>
+    </div>
+    <div class="sound-hint">SON : <span id="sound-state">ACTIVÉ</span> <button id="sound-toggle" aria-label="Activer ou couper le son">◖))</button></div>
+  </main>
+
+  <main id="app" class="app hidden">
+    <header class="header">
+      <a class="wordmark" href="#home" data-page="home">ND<span>://</span>REBOOT</a>
+      <div class="header-right"><span class="online-dot"></span> SYSTEM ONLINE <span class="clock" id="clock">22:07:77</span></div>
+    </header>
+    <div class="app-layout">
+      <nav class="sidebar" aria-label="Navigation principale">
+        <div class="nav-caption">MAINFRAME / MENU</div>
+        <button class="nav-btn active" data-page="home"><b>01</b> ACCUEIL</button>
+        <button class="nav-btn" data-page="missions"><b>02</b> MISSIONS</button>
+        <button class="nav-btn" data-page="map"><b>03</b> CARTE</button>
+        <button class="nav-btn" data-page="garage"><b>04</b> GARAGE</button>
+        <button class="nav-btn" data-page="about"><b>05</b> À PROPOS</button>
+        <div class="sidebar-bottom"><span>USER: GUEST_077</span><span>CONNEXION SÉCURISÉE</span></div>
+      </nav>
+      <section class="content">
+        <section class="page active" id="page-home">
+          <div class="hero">
+            <div class="hero-copy">
+              <div class="eyebrow"><span></span> WELCOME TO THE DISTRICT</div>
+              <h1>LA VILLE<br>NE DORT <em>JAMAIS.</em></h1>
+              <p>Un horizon de chrome, de néons et de possibilités. Bienvenue dans le secteur où chaque rue cache une histoire.</p>
+              <button class="action-btn" data-page="missions">DÉCOUVRIR LES MISSIONS <span>↗</span></button>
+            </div>
+            <div class="hero-stamp">NIGHT<br><b>09</b><br>SECTOR</div>
+            <div class="hero-foot">DISTRICT 09 — CENTRAL CITY <span>///</span> 23:48 LOCAL TIME</div>
+          </div>
+          <div class="section-heading"><span>01 / TRANSMISSIONS</span><small>DERNIÈRES NOUVELLES</small></div>
+          <div class="cards">
+            <article class="info-card"><div class="card-index">NEWS_001</div><div class="card-icon">⌁</div><h3>RÉSEAU INSTABLE</h3><p>Des interférences inhabituelles perturbent le réseau du quartier industriel.</p><span class="card-link">TRANSMISSION REÇUE ↗</span></article>
+            <article class="info-card"><div class="card-index">NEWS_002</div><div class="card-icon">◈</div><h3>COURSE NOCTURNE</h3><p>Les pilotes du secteur Est organisent un rassemblement clandestin.</p><span class="card-link">VOIR LE RAPPORT ↗</span></article>
+            <article class="info-card"><div class="card-index">NEWS_003</div><div class="card-icon">⌬</div><h3>ZONE INCONNUE</h3><p>Une nouvelle zone vient d'apparaître sur les cartes publiques.</p><span class="card-link">COORDONNÉES ↗</span></article>
+          </div>
+        </section>
+
+        <section class="page" id="page-missions">
+          <div class="page-head"><div class="eyebrow"><span></span> CONTRACT DATABASE</div><h1>MISSIONS<span class="red">.</span></h1><p>Contrats disponibles dans le secteur. Choisis ta prochaine destination.</p></div>
+          <div class="mission-list">
+            <article class="mission"><div class="mission-no">01</div><div><small>CONTRAT // EXPLORATION</small><h3>LES LUMIÈRES DU PORT</h3><p>Explorer les docks après la fermeture et retrouver l'origine d'un signal inconnu.</p></div><span class="status">DISPONIBLE</span></article>
+            <article class="mission"><div class="mission-no">02</div><div><small>CONTRAT // LIVRAISON</small><h3>DERNIER EXPRESS</h3><p>Un colis doit traverser le centre-ville avant le lever du soleil.</p></div><span class="status">DISPONIBLE</span></article>
+            <article class="mission"><div class="mission-no">03</div><div><small>CONTRAT // COURSE</small><h3>BITUME ROUGE</h3><p>Un défi de pilotage attend les conducteurs les plus rapides.</p></div><span class="status locked">VERROUILLÉ</span></article>
+          </div>
+        </section>
+
+        <section class="page" id="page-map">
+          <div class="page-head"><div class="eyebrow"><span></span> CITY GRID / LIVE</div><h1>CARTE<span class="red">.</span></h1><p>Cartographie du secteur métropolitain — données fictives.</p></div>
+          <div class="map-panel">
+            <div class="map-grid"></div><div class="map-river"></div>
+            <span class="map-label label-a">CENTRAL<br>CORE</span><span class="map-label label-b">OLD<br>DOCKS</span><span class="map-label label-c">SECTOR 09</span>
+            <i class="map-pin pin-a"></i><i class="map-pin pin-b"></i><i class="map-pin pin-c"></i>
+            <div class="map-legend"><span><i></i> ZONE ACTIVE</span><span>GRID 09-A / 77-C</span></div>
+          </div>
+        </section>
+
+        <section class="page" id="page-garage">
+          <div class="page-head"><div class="eyebrow"><span></span> VEHICLE DATABASE</div><h1>GARAGE<span class="red">.</span></h1><p>Quelques machines repérées dans les rues du District.</p></div>
+          <div class="vehicle-grid">
+            <article class="vehicle-card"><div class="vehicle-art vehicle-one"><span>01</span></div><small>SPORT / ELECTRIC</small><h3>VOLT R-9</h3><p>Accélération instantanée. Très peu de discrétion.</p><b>CLASS // S</b></article>
+            <article class="vehicle-card"><div class="vehicle-art vehicle-two"><span>02</span></div><small>STREET / CUSTOM</small><h3>NEON GT</h3><p>Une classique remise au goût du futur.</p><b>CLASS // A</b></article>
+            <article class="vehicle-card"><div class="vehicle-art vehicle-three"><span>03</span></div><small>UTILITY / HEAVY</small><h3>IRON MULE</h3><p>Pas rapide, mais presque impossible à arrêter.</p><b>CLASS // B</b></article>
+          </div>
+        </section>
+
+        <section class="page" id="page-about">
+          <div class="page-head"><div class="eyebrow"><span></span> ABOUT THIS PROJECT</div><h1>À PROPOS<span class="red">.</span></h1><p>Une expérience fictive, imaginée comme l'interface d'un jeu vidéo open-world.</p></div>
+          <div class="about-panel"><div class="about-big">ND<span>://</span></div><div><h2>BIENVENUE DANS LE DISTRICT.</h2><p>NEON DISTRICT: REBOOT est un concept de site interactif. Il met en scène une mégalopole imaginaire, ses quartiers, ses véhicules et ses contrats. Aucun jeu réel n'est nécessaire : tout se déroule dans cette interface.</p><p class="muted">DESIGNED FOR THE NIGHT SHIFT. BUILT FOR THE WEB.</p></div></div>
+          <div class="credits"><span>CREATIVE SYSTEM</span><b>NEON DISTRICT NETWORK</b><span>WEB EXPERIENCE / 2026</span></div>
+        </section>
+      </section>
+    </div>
+    <footer class="app-footer"><span>NEON DISTRICT NETWORK © 2077</span><span>ALL SYSTEMS NOMINAL <i></i></span></footer>
+  </main>
+  <script src="js/app.js"></script>
+</body>
+</html>
